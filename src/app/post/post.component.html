@@ -1,0 +1,55 @@
+<div class="one_post" >
+    <div class="one_post__header">
+      <span class="one_post__header__name_span">{{ post.name }} </span>
+      <span class="one_post__header__date_span">{{ post.add_date | date : 'dd.MM.yyyy HH:mm'}} </span>
+    </div>
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   
+    <br />
+    <span class="one_post__text_span">
+        {{ post.text }}
+    </span>
+  
+  </div>
+
+
+
+
+  <div  *ngFor="let comment of post.comments" class="one_comment" >
+    <div class="one_post__header">
+      <span class="one_post__header__name_span">{{ comment.name }} </span>
+      <span class="one_post__header__date_span">{{ comment.add_date | date : 'dd.MM.yyyy HH:mm'}} </span>
+    </div>
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   
+    <br />
+    <span class="one_post__text_span">
+        {{ comment.text }}
+    </span>
+  
+  </div>
+
+
+  <div class="add_comment">
+
+    <div class="add_comment__text_span">
+      Add new comment to post
+    </div>
+  
+    <mat-form-field class="add_comment__mat-form-field">
+      <input [(ngModel)]="name" matInput placeholder="Your name">
+    </mat-form-field>
+    <br />
+    <mat-form-field class="add_comment__mat-form-field">
+      <textarea [(ngModel)]="text" class="add_comment__mat-form-field__textarea" matInput placeholder="Comment text"></textarea>
+    </mat-form-field>
+    <br/>
+    <div class="add_comment__wrap-button" *ngIf="!showSpinner">
+      <button mat-raised-button onclick="" (click)="click_add_comment()">Add</button>
+    </div>
+    <div  class="add_comment__wrap-spinner" *ngIf="showSpinner">
+      <mat-spinner [diameter]="45"></mat-spinner>
+    </div>
+  </div>

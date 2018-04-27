@@ -1,0 +1,21 @@
+<div class="one_post">
+
+  <div class="one_post__text_span">
+    Add new post to site
+  </div>
+
+  <mat-form-field class="one_post__mat-form-field">
+    <input [(ngModel)]="name" matInput placeholder="Your name">
+  </mat-form-field>
+  <br />
+  <mat-form-field class="one_post__mat-form-field">
+    <textarea [(ngModel)]="text" class="one_post__mat-form-field__textarea" matInput placeholder="Post text"></textarea>
+  </mat-form-field>
+  <br/>
+  <div class="one_post__wrap-button" *ngIf="!showSpinner">
+    <button mat-raised-button onclick="" (click)="click_add_post()">Add</button>
+  </div>
+  <div  class="one_post__wrap-spinner" *ngIf="showSpinner">
+    <mat-spinner [diameter]="50"></mat-spinner>
+  </div>
+</div>

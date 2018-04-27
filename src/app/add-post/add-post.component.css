@@ -1,0 +1,38 @@
+.one_post {
+    background: #fff;
+    -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.04);
+    box-shadow: 0 1px 4px rgba(0,0,0,.04);
+    border: 1px solid rgba(0,0,0,.09);
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.one_post__mat-form-field__textarea {
+    height: 150px; 
+}
+
+.one_post__mat-form-field {
+    width: 100%;
+}
+
+.one_post__text_span {
+    color: #8d8d8d;
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.one_post__wrap-button {
+width: 100%;
+padding-bottom: 20px;
+display: flex;
+justify-content: flex-end;
+}
+
+.one_post__wrap-spinner{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

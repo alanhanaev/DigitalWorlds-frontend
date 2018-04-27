@@ -1,0 +1,48 @@
+.one_post {
+    background: #fff;
+    -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.04);
+    box-shadow: 0 1px 4px rgba(0,0,0,.04);
+    border: 1px solid rgba(0,0,0,.09);
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    padding: 10px;
+    max-height: 150px;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+}
+
+.one_post__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.one_post__bottom {
+margin-top: 10px;
+display: flex;
+justify-content: flex-end;
+}
+
+.one_post__bottom > a {
+    text-decoration: none;
+    color: rgba(0,0,0,.54);
+}
+
+.one_post__bottom > a:hover {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.733);
+}
+
+.one_post__header__name_span {
+    color: #03a87c;
+}
+
+.one_post__header__date_span {
+    color: rgba(0,0,0,.54);
+}
+
+.one_post__text_span {
+    color: #606060;
+}
